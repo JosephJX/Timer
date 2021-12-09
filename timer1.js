@@ -1,10 +1,10 @@
 const secs = process.argv
   .filter(time => !isNaN(time))
-  .filter(time => time >= 0)
+  .filter(time => time >= 0);
 
 secs.forEach((time) => {
   setTimeout(() => {
-  process.stdout.write('\x07'); 
-}, time * 1000);
+    process.stdout.write('\x07');
+  }, time * 1000);
 
-})
+});
